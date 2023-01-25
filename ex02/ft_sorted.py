@@ -7,7 +7,6 @@ import sys
 
 
 def is_equal(arr1, arr2):
-    # Linearly compare elements
     for idx in range(len(arr1)):
         if arr1[idx] != arr2[idx]:
             return False
