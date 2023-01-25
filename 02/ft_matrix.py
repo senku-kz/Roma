@@ -1,4 +1,5 @@
 """
+python ft_matrix.py 2 3
 python ft_matrix.py 2
 """
 import sys
