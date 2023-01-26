@@ -25,7 +25,7 @@ class Circle:
 
     def contains(self, point: Point):
         length = (point.x ** 2 + point.y ** 2) ** 0.5
-        if length > self.radius:
+        if length > abs(self.radius):
             return False
         return True
 
@@ -35,7 +35,7 @@ if __name__ == "__main__":
     circle_center = (0, 0)
     circle_radius = 1
     circle = Circle(circle_center, circle_radius)
-    print("The Point({}, {}) lies in the Circle of center ({}, {}) and radius {}".format(point_obj.x,
+    print("The Point ({}, {}) lies in the Circle of center ({}, {}) and radius {}".format(point_obj.x,
                                                                                          point_obj.y,
                                                                                          circle.center.x,
                                                                                          circle.center.y,
