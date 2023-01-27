@@ -20,5 +20,6 @@ if __name__ == "__main__":
                 d[c] = 1
 
         t = dict(sorted(d.items()))
+        print("Char count:")
         for k, v in t.items():
             print("{} = {}".format(k, v))
