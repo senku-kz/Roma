@@ -24,19 +24,30 @@ class Circle:
         return "Circle of center ({}, {}) and radius {}".format(self.center.x, self.center.y, self.radius)
 
     def contains(self, point: Point):
-        length = (point.x ** 2 + point.y ** 2) ** 0.5
+        # length = (point.x ** 2 + point.y ** 2) ** 0.5
+        length = ((point.x - self.center.x) ** 2 + (point.y - self.center.y) ** 2) ** 0.5
         if length > abs(self.radius):
             return False
         return True
 
 
 if __name__ == "__main__":
-    point_obj = Point(float(sys.argv[1]), float(sys.argv[2]))
-    circle_center = (0, 0)
-    circle_radius = 1
-    circle = Circle(circle_center, circle_radius)
-    print("The Point ({}, {}) lies in the Circle of center ({}, {}) and radius {}".format(point_obj.x,
-                                                                                         point_obj.y,
-                                                                                         circle.center.x,
-                                                                                         circle.center.y,
-                                                                                         circle.radius))
+    if len(sys.argv) < 3:
+        print("Error! Usage: python circle.py <x> <y>")
+    else:
+        point_obj = Point(float(sys.argv[1]), float(sys.argv[2]))
+        circle_center = (0, 0)
+        circle_radius = 1
+        circle = Circle(circle_center, circle_radius)
+        if circle.contains(point_obj):
+            print("The Point ({}, {}) lies in the Circle of center ({}, {}) and radius {}".format(point_obj.x,
+                                                                                                  point_obj.y,
+                                                                                                  circle.center.x,
+                                                                                                  circle.center.y,
+                                                                                                  circle.radius))
+        else:
+            print("The Point ({}, {}) lies out of the Circle of center ({}, {}) and radius {}".format(point_obj.x,
+                                                                                                      point_obj.y,
+                                                                                                      circle.center.x,
+                                                                                                      circle.center.y,
+                                                                                                      circle.radius))
