@@ -5,8 +5,8 @@ python -c 'from student import Student; print(Student("Stefano","Guarino"))'
 
 
 class Person:
-    first_name = ''
-    last_name = ''
+    # first_name = ''
+    # last_name = ''
 
     def __init__(self, first_name, last_name):
         self.first_name = first_name
@@ -32,10 +32,15 @@ if __name__ == "__main__":
     f_name = input("Insert first name: ")
     l_name = input("Insert last name: ")
     ch = input("Are you a student? (y/n)")
-    if ch == "y":
-        program = input("Please insert your degree course:")
-        student = Student(f_name, l_name, program)
-        print(student)
-    else:
-        person = Person(f_name, l_name)
-        print(person)
+    while True:
+        if ch == "y":
+            program = input("Please insert your degree course: ")
+            student = Student(f_name, l_name, program)
+            print(student)
+            break
+        elif ch == "n":
+            person = Person(f_name, l_name)
+            print(person)
+            break
+        else:
+            ch = input("Please type \"y\" or \"n\": ")
