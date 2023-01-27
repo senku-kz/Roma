@@ -7,7 +7,7 @@ python -c 'from ft_trim import trim; print(trim([1,2,3,4]))'
 import sys
 
 
-def trim(lst):
+def trim(lst:list):
     return None
 
 
