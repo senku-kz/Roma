@@ -19,7 +19,10 @@ if __name__ == "__main__":
         for i in range(n):
             print("[", end="")
             for j in range(m):
-                print(arr[i][j], end=" ")
+                if j != 0:
+                    print(", ", end="")
+                print(arr[i][j], end="")
+
             print("]")
 
         # The sum over rows
@@ -32,7 +35,9 @@ if __name__ == "__main__":
 
         print("The sum over rows is:\n[", end="")
         for i in range(n):
-            print(rows_sum[i], end=" ")
+            if i != 0:
+                print(", ", end="")
+            print(rows_sum[i], end="")
         print("]")
 
         # The sum over columns
@@ -45,5 +50,7 @@ if __name__ == "__main__":
 
         print("The sum over columns is:\n[", end="")
         for j in range(m):
-            print(column_sum[j], end=" ")
+            if j != 0:
+                print(", ", end="")
+            print(column_sum[j], end="")
         print("]")
