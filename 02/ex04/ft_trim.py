@@ -8,7 +8,6 @@ import sys
 
 
 def trim(lst):
-    print("The new list is:", lst[1:len(lst)-1])
     return None
 
 
@@ -17,4 +16,5 @@ if __name__ == "__main__":
         print("Error! You must insert at least 2 values")
     else:
         arr = sys.argv[1:]
-        trim(arr)
+        print("The new list is:", arr[1:len(arr) - 1])
+        # trim(arr)
