@@ -16,5 +16,7 @@ with open(filename) as f:
         else:
             d[word_length] = 1
 
-with open(dmp_filename, "wb") as binary_file:
-    pickle.dump(d, binary_file, pickle.HIGHEST_PROTOCOL)
+with open(dmp_filename, 'wb') as binary_file:
+    pickle.dump(d, binary_file)
+    # pickle.dump(d, binary_file, protocol= pickle.DEFAULT_PROTOCOL)
+    # pickle.dump(d, binary_file, pickle.HIGHEST_PROTOCOL, fix_imports=True)
