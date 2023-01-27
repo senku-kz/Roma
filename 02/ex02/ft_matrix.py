@@ -33,7 +33,8 @@ if __name__ == "__main__":
                 s = s + arr[i][j]
             rows_sum[i] = s
 
-        print("The sum over rows is:\n[", end="")
+        print("The sum over rows is:")
+        print("[", end="")
         for i in range(n):
             if i != 0:
                 print(", ", end="")
@@ -48,7 +49,8 @@ if __name__ == "__main__":
                 s = s + arr[i][j]
             column_sum[j] = s
 
-        print("The sum over columns is:\n[", end="")
+        print("The sum over columns is:")
+        print("[", end="")
         for j in range(m):
             if j != 0:
                 print(", ", end="")
